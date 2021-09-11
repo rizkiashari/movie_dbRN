@@ -2,7 +2,16 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import React from 'react';
 import {BottomNavigator} from '../components';
-import {DetailMovie, Home, Splash, UserProfile} from '../pages';
+import {
+  DataRegister,
+  DetailMovie,
+  Home,
+  Register1,
+  Register2,
+  Splash,
+  UserProfile,
+} from '../pages';
+
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
 
@@ -35,6 +44,21 @@ const Router = () => {
       <Stack.Screen
         name="DetailMovie"
         component={DetailMovie}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name="Register1"
+        component={Register1}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name="Register2"
+        component={Register2}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name="DataRegister"
+        component={DataRegister}
         options={{headerShown: false}}
       />
     </Stack.Navigator>
