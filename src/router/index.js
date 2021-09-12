@@ -3,6 +3,7 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import React from 'react';
 import {BottomNavigator} from '../components';
 import {
+  Confirm,
   DataRegister,
   DetailMovie,
   Home,
@@ -59,6 +60,11 @@ const Router = () => {
       <Stack.Screen
         name="DataRegister"
         component={DataRegister}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name="Confirm"
+        component={Confirm}
         options={{headerShown: false}}
       />
     </Stack.Navigator>

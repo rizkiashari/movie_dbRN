@@ -1,11 +1,18 @@
 import React, {useEffect, useState} from 'react';
-import {ScrollView, StyleSheet, Text, View} from 'react-native';
+import {
+  ScrollView,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+} from 'react-native';
 import {
   CommingSoon,
   Gap,
   DiscoverMovie,
   Loading,
   TopRate,
+  Button,
 } from '../../components';
 import LatestMovie from '../../components/molecules/LatestMovie';
 import {
@@ -33,6 +40,7 @@ const Home = ({navigation}) => {
     setLoading(false);
     fetchApi();
   }, []);
+
   return (
     <>
       {!loading && <Loading />}
@@ -138,5 +146,23 @@ const styles = StyleSheet.create({
   },
   topRate: {
     marginBottom: 16,
+  },
+  search: {
+    borderWidth: 1,
+    borderColor: colors.border,
+    borderRadius: 6 / 2,
+    width: '100%',
+    height: 45,
+  },
+  searchContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    paddingHorizontal: 16,
+    height: 45,
+  },
+  buttonSearch: {
+    position: 'absolute',
+    right: 22,
+    top: 12,
   },
 });
