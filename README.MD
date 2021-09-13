@@ -7,3 +7,6 @@ npm install untuk menginstall nodenya
 npm start
 kemudian
 npm run android
+
+#Jalankan Apk Release
+npx react-native run-android --variant=release
